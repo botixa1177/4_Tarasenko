@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ConstraintActivity">
+
+    <!-- Top Scenery Image -->
+    <ImageView
+        android:id="@+id/ivScenery"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/scenery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Registration Header -->
+    <ImageView
+        android:id="@+id/ivRegIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/icon_registration"
+        app:layout_constraintStart_toEndOf="@id/ivScenery"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRegTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Регистрация"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivRegIcon"
+        app:layout_constraintStart_toEndOf="@id/ivRegIcon"
+        app:layout_constraintTop_toTopOf="@id/ivRegIcon" />
+
+    <!-- Help -->
+    <ImageView
+        android:id="@+id/ivHelpIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_help"
+        app:layout_constraintStart_toStartOf="@id/ivRegIcon"
+        app:layout_constraintTop_toBottomOf="@id/tvRegTitle" />
+
+    <TextView
+        android:id="@+id/tvHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Помощь"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivHelpIcon"
+        app:layout_constraintStart_toEndOf="@id/ivHelpIcon"
+        app:layout_constraintTop_toTopOf="@id/ivHelpIcon" />
+
+    <!-- Login -->
+    <ImageView
+        android:id="@+id/ivUserIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_user"
+        app:layout_constraintStart_toStartOf="@id/ivHelpIcon"
+        app:layout_constraintTop_toBottomOf="@id/tvHelp" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Вход"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivUserIcon"
+        app:layout_constraintStart_toEndOf="@id/ivUserIcon"
+        app:layout_constraintTop_toTopOf="@id/ivUserIcon" />
+
+    <!-- Field 1: Name -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        android:hint="Введите ваше имя"
+        android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivScenery" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <!-- Field 2: Surname -->
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:hint="Введите вашу фамилию"
+        android:inputType="textPersonName"
+        android:paddingBottom="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/etName"
+        app:layout_constraintStart_toStartOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/line1" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/etSurname"
+        app:layout_constraintStart_toStartOf="@id/etSurname"
+        app:layout_constraintTop_toBottomOf="@id/etSurname" />
+
+    <!-- Field 3: Phone -->
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:hint="Введите ваш контактный номер"
+        android:inputType="phone"
+        android:paddingBottom="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/etSurname"
+        app:layout_constraintStart_toStartOf="@id/etSurname"
+        app:layout_constraintTop_toBottomOf="@id/line2" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/etPhone"
+        app:layout_constraintStart_toStartOf="@id/etPhone"
+        app:layout_constraintTop_toBottomOf="@id/etPhone" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/primary_400"
+        android:text="Зарегистрироваться"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/etPhone"
+        app:layout_constraintStart_toStartOf="@id/etPhone"
+        app:layout_constraintTop_toBottomOf="@id/line3" />
+
+    <!-- Checkbox & Terms -->
+    <CheckBox
+        android:id="@+id/cbTerms"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister" />
+
+    <TextView
+        android:id="@+id/tvTerms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Согласен(-а) с условиями использования\nи политикой конфиденциальности"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/cbTerms"
+        app:layout_constraintEnd_toEndOf="@id/btnRegister"
+        app:layout_constraintStart_toEndOf="@id/cbTerms"
+        app:layout_constraintTop_toTopOf="@id/cbTerms" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
